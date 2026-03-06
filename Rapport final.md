@@ -58,52 +58,7 @@ Le modèle doit permettre de répondre aux exigences métiers de la DGDSN :
 * **Axe de Performance :** Calculer des taux de criminalité grâce au croisement avec les données de population INSEE.
 
 
-```mermaid
-erDiagram
-    DIM_INFRACTIONS ||--o{ FAITS_CRIMINELS : "concerne"
-    DIM_DEPARTEMENTS ||--o{ FAITS_CRIMINELS : "localise"
-    DIM_SERVICES ||--o{ FAITS_CRIMINELS : "enregistre"
-    DIM_TEMPS ||--o{ FAITS_CRIMINELS : "date"
-    
-    DIM_DEPARTEMENTS ||--o{ STAT_POPULATION : "concerne"
-    DIM_TEMPS ||--o{ STAT_POPULATION : "mesure_en"
-
-    DIM_INFRACTIONS {
-        int id_infraction PK
-        string libelle
-    }
-
-    DIM_DEPARTEMENTS {
-        string code_dept PK
-    }
-
-    DIM_SERVICES {
-        int id_service PK
-        string type_service
-        string nom_unite
-        string perimetre
-    }
-
-    DIM_TEMPS {
-        int annee PK
-    }
-
-    FAITS_CRIMINELS {
-        int id_fait PK
-        int annee FK
-        int id_infraction FK
-        string code_dept FK
-        int id_service FK
-        int nombre_faits
-    }
-
-    STAT_POPULATION {
-        int annee PK, FK
-        string code_dept PK, FK
-        int population
-    }
-
-```
+![alt text](image.png)
 *Figure 1 : Modèle Conceptuel des Données (MCD) intégrant les statistiques 4001 et les données INSEE.*
 
 #### Légende des Cardinalités
