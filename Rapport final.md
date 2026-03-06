@@ -278,3 +278,9 @@ La migration vers un modèle graphe ne constitue pas seulement un changement tec
 ## Lien du projet
 
 [SA-5.02-Groupe-2](https://github.com/Blockburnb/SA-5.02-Groupe-2)
+
+---
+
+## Lien de la vidéo
+
+[Vidéo Neo4j](https://youtu.be/ru5zXzTRBzE)
